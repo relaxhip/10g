@@ -10,6 +10,7 @@
 	<link rel="stylesheet" href="css/mobile.css">
 	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="css/hamburger.css">
 	<script src="jquery-1.12.4.min.js"></script>
 	<script src="slick/slick.min.js"></script>
 	<script>
@@ -37,6 +38,19 @@
 					$("nav").removeClass("nav-black")
 				}
 			});
+			$('.hamburger').click(function(){
+				$(this).toggleClass("hamburger-x");
+				$("nav").find("ul").slideToggle("display");
+			});
+			$(window).resize(function(){
+				let w = $(window).width();
+				if(w>750){
+					$(".hamburger").next().show();
+				}else{
+					$(".hamburger").next().hide();
+					$(".hamburger").removeClass("hamburger-x");
+				}
+			});
 			$('.news-col-4').slick({
 			  autoplay: true,
 			  autoplaySpeed: 1500,
@@ -47,7 +61,7 @@
 			    {
 			      breakpoint: 959,
 			      settings: {
-			        slidesToShow: 3,
+			        slidesToShow: 2,
 			        slidesToScroll: 1,
 			        infinite: true,
 			    	}
@@ -55,7 +69,7 @@
 			    {
 			      breakpoint: 650,
 			      settings: {
-			        slidesToShow: 2,
+			        slidesToShow: 1,
 			        slidesToScroll: 1,
 			        infinite: true,
 			    	}
@@ -70,6 +84,7 @@
 		<nav class="full-width clearfix">
 			<div class="fixed-width">
 				<div class="logo">FEATURE<span class="orange">D</span></div>
+				<div class="hamburger"><span></span></div>
 				<ul>
 					<li><a href="javascript:;" class="home" data-target="home">Home</a></li>
 					<li><a href="javascript:;" data-target="what">Service</a></li>

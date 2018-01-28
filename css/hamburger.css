@@ -1,8 +1,8 @@
 .hamburger , .hamburger-x {
-	width: 60px;
-	height: 60px;
+	width: 70px;
+	height: 70px;
 	position: relative;
-	background-color: #f20;
+	/*background-color: #f20;*/
 }
 .hamburger span , .hamburger-x span {
 	display: block;
@@ -46,4 +46,23 @@
 	transform: rotate(-135deg);
 	bottom: 0;
 	transition: bottom 0.3s , transform 0.3s 0.3s;
+}
+@media screen and (min-width: 750px) {
+	.hamburger {
+		display: none;
+	}
+}
+@media screen and (max-width: 749px) {
+	.hamburger {
+		display: block;
+		float: right;
+	}
+	nav ul {
+		float: none;
+		clear: both;
+		display: none;
+	}
+	nav li {
+		float: none;
+	}
 }

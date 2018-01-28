@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,600');
+	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,600');
 		@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 		*{
@@ -28,10 +28,11 @@
 			position: absolute;
 			z-index: 999;
 			color: white
+			font-size: 20px;
 		}
 		.slick-prev {
-			left: 15px!important;
+			left: 10px!important;
 		}
 		.slick-next{
-			right: 15px!important;
+			right: 10px!important;
 		}
